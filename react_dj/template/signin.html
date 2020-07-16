@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Sign In</title>
+    <link rel= "stylesheet" href='{%static "signin.css"%}'/>
+    <script src="https://kit.fontawesome.com/79fbcfceff.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+<div class="topnav" style="width: 100%">
+    <img src= '{% static "consultadd.jpg" %}'>
+</div>
+<div class="row">
+    <img align="left" width=450 src= '{% static "112528045-vertical-food-banner-delicious-toasts-with-grilled-cheese-quail-eggs-cream-cheese-and-nuts-author-s-.jpg" %}'>
+</div>
+<!--<div style="margin-left: 50%; height: 800px padding-top: 10%">-->
+    <div class= "box">
+        <h1 style="padding-top: 10%">Welcome Back!</h1>
+        <form action="{% url 'submit'%}" style="padding-top: 3% padding-bottom: 5%" >
+
+        <input type="text" name="Username" placeholder="Username"/><br><br>
+        <input type="text" name="Emailid" placeholder="Enter Email Id"/><br><br>
+        <input type="password" name="Password" placeholder="Enter Password"/><br><br>
+        <input type="Submit" name="submit" value="Sign In"/><br><br>
+         <h2>Login with using social media</h2>
+        <button onclick="window.location.href='https://www.facebook.com/';" class="facebook_btn"><i class="fa fa-facebook fa-fw"></i></button>
+            <button onclick="window.location.href='https://www.gmail.com';"class="google_btn"><i class="fa fa-google" aria-hidden="true"></i></button>
+
+            <h2>Don't have an account?<a href="{% url 'signup' %}"><font style="text-decoration:underline; color: green;">Sign up</font></a></p>
+<!--            <button style="text-decoration:underline; color: green;" class="signup_btn">SignUp!</button>-->
+            </h2>
+         </form>
+
+    </div>
+<!--</
+</body>
+</html>
+
