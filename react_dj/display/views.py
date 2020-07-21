@@ -31,9 +31,9 @@ def submitUser(request):
 
 def sUser(request):
 
-    email = request.GET['Emailid']
-    password = request.GET['Password']
-    name = request.GET['Username']
+    email = request.GET['email']
+    password = request.GET['password']
+    name = request.GET['username']
     print(email, password, name, "this is me")
 
     url = "http://127.0.0.1:8000/api/login/"
